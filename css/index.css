@@ -1,0 +1,124 @@
+body{
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.top{
+    background-image: url('../icon/head/background.jpg');
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.top .wrapper{
+    color: ghostwhite;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.head{
+    color: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1000;
+}
+
+.head.active{
+    background-color: black;
+    color: white;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+
+.head .wrapper{
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+
+.head .wrapper .block{
+    display: flex;
+    justify-content: end;
+    padding: 20px;
+}
+
+.head .wrapper .block .text{
+    padding: 10px;
+    font-size: 25px;
+}
+
+.top .wrapper .main{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 0px 5%;
+    margin: 0;
+    height: 80%;
+}
+
+
+.top .wrapper .main .block{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 100px 0;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.top .wrapper .main .social{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding: 0px;
+    width: 10%;
+}
+
+.top .wrapper .main .text{
+    padding: 0px;
+    color: #097009;
+    font-size: 36px;
+}
+
+.top .wrapper .main .social .img{
+    width: 30px;
+    height: 30px;
+    margin: 3px 0px;
+    filter: brightness(0) invert(1);
+    transition: 0.5s;
+    z-index: 100;
+}
+
+.top .wrapper .main .social .img:hover{
+    cursor: pointer;
+    filter: none;
+    border-color: white;
+    border-radius: 30px;
+    background-color: white;
+    transition: 0.5s;
+}
+
+
