@@ -1,0 +1,128 @@
+@media (max-width: 1200px) {
+    .wrapper {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 900px) {
+    .wrapper {
+        max-width: 800px;
+    }
+
+    .head{
+        height: 50px;
+    }
+
+    .head .wrapper .block{
+        padding: 5px;
+    }
+
+    .head .wrapper .block .text.hiden{
+        display: block;
+        opacity: 1;
+    }
+
+    .head .wrapper .block .text{
+        display: none;
+        opacity: 0;
+    }
+
+    .top .wrapper .main{
+        flex-direction: column;
+    }
+
+    .top .wrapper .main .sec-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    .top .wrapper .main .block{
+        padding: 0;
+    }
+
+    .top .wrapper .main .sec-block .img{
+        padding: 10px;
+    }
+
+    .top .wrapper .main{
+        align-items: center;
+    }
+
+    .about .wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .wrapper .block{
+        width: 90%;
+    }
+    .about .wrapper .sec-block{
+        display: flex;
+        align-items: start;
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .about .wrapper .sec-block img{
+        width: 40%;
+    }
+
+    .about .wrapper .sec-block .title{
+        padding-left: 0;
+    }
+
+    .about .wrapper .sec-block p{
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        max-width: 500px;
+    }
+
+    .head{
+        height: 20px;
+    }
+
+    .top{
+        height: 300px;
+    }
+
+    .top .wrapper{
+        font-size: 16px;
+    }
+
+    .top .wrapper .main .text{
+        font-size: 14px;
+    }
+
+    .top .wrapper .main .sec-block .img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .head .wrapper .block .text .img{
+        width: 20px;
+        height: 20px;
+    }
+    .head .wrapper .block {
+        margin: 0px;
+        padding: 10px;
+        }
+
+    .head{
+        height: 50px;
+    }
+
+    .about .wrapper .sec-block{
+        flex-direction: column;
+    }
+
+    .about .wrapper .sec-block img{
+        width: 70%;
+    }
+
+    }
