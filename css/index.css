@@ -55,7 +55,7 @@ body{
 }
 
 .top{
-    background-image: url('../icon/head/background.jpg');
+    background-image: url('../icon/head/background.png');
     height: 600px;
     background-size: cover;
     background-position: center;
@@ -74,7 +74,7 @@ body{
 
 .head{
     color: white;
-    height: 100px;
+    height: 70px;
     width: 100%;
     position: fixed;
     display: flex;
@@ -86,7 +86,7 @@ body{
 .head.active{
     background-color: black;
     color: white;
-    height: 100px;
+    height: 70px;
     width: 100%;
     position: fixed;
     display: flex;
@@ -100,8 +100,33 @@ body{
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
 
+}
+
+.head .wrapper .text.hiden{
+    transition: 0.5s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.head .wrapper .text.active{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 25px;
+    opacity: 1;
+}
+
+.head .wrapper .text.active:hover{
+    color: #097009;
 }
 
 .head .wrapper .block{
@@ -110,6 +135,7 @@ body{
     padding: 20px;
 }
 
+
 .head .wrapper .block .text{
     padding: 10px;
     font-size: 25px;
@@ -117,6 +143,7 @@ body{
     color: #f3f3f3;
     text-decoration: none;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .head .wrapper .block .text:hover{
@@ -167,7 +194,8 @@ body{
 
 .top .wrapper .main .text{
     padding: 0px;
-    color: #097009;
+    color: #7bdf7b;
+    text-shadow: 3px 3px 10px #0c0101;
     font-size: 36px;
 }
 
@@ -237,7 +265,7 @@ body{
 }
 
 .about{
-    padding: 30px 0;
+    padding: 50px 0px 50px 0;
 }
 
 .about .wrapper{
@@ -262,6 +290,7 @@ body{
     font-size: 50px;
     text-transform: uppercase;
     color: #097009;
+    margin: 0;
 }
 
 .about .wrapper .block .block{
@@ -271,14 +300,14 @@ body{
 }
 
 .about .wrapper .sec-block img{
-    width: 80%;
+    width: 60%;
     border-radius: 80%;
 }
 
 .about .wrapper .sec-block .title{
     width: 100%;
     margin: 0;
-    padding: 20px;
+    padding:5px 20px 20px 20px;
     font-size: 40px;
 }
 
@@ -287,4 +316,235 @@ body{
     padding: 20px;
     font-size: 24px;
     color: #097009;
+}
+
+.skill{
+    max-height: 400px;
+    background-color: #222222;
+    padding: 50px 0;
+}
+
+.skill .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f3f3f3;
+    font-size: 24px;
+}
+
+.skill .wrapper .title{
+    margin: 0 0 30px 0;
+}
+
+.skill .wrapper .block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.skill .wrapper .block .block{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill .wrapper .block .block .text{
+    width: 100%;
+    font-size: 16px;
+    padding: 0;
+}
+
+.skill .wrapper .block .block .pic{
+    background-color: #097009;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill .wrapper .block .block .pic .img{
+    filter: brightness(0) invert(1);
+    width: 60px;
+}
+
+.program{
+    padding: 50px 0;
+}
+
+.program .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.program .wrapper .block{
+    width: 60%;
+}
+
+.program .wrapper .sec-block{
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.program .wrapper .sec-block .info{
+    width: 40%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #097009;
+}
+
+.program .wrapper .sec-block .info .text{
+    padding: 0;
+    margin: 0;
+    color: #0c0101;
+}
+
+.program .wrapper .sec-block .info h1{
+    margin: 0;
+}
+
+
+.program .wrapper .block .title{
+    font-size: 42px;
+    color: #097009;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.program .wrapper .block .text{
+    font-size: 16px;
+    color: #0c0101;
+}
+
+.language {
+    background-image: url('../icon/main/background.png');
+    background-size: cover;
+    background-position: 0% calc(0px - 200px);
+    padding: 50px 0;
+}
+
+
+.language .wrapper{
+    display: flex;
+    flex-direction: column;
+    color: #f3f3f3;
+    font-size: 24px;
+}
+
+.language .wrapper .title{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.language .wrapper .block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.language .wrapper .block .sec-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 50px;
+    width: 30%;
+}
+
+.language .wrapper .block .sec-block .title{
+    margin: 0;
+    font-size: 36px;
+    color: #7bdf7b;
+    text-shadow: 3px 3px 10px #0c0101;
+}
+
+.language .wrapper .block .sec-block .text{
+    margin: 10px 0;
+    font-size: 24px;
+    text-shadow: 3px 3px 10px #0c0101;
+}
+
+.experience{
+    padding: 50px 0;
+}
+
+.experience .wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.experience .wrapper .title{
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: #097009;
+    margin-bottom: 20px;
+}
+
+.experience .wrapper .title h1{
+    margin: 0;
+}
+
+.experience .wrapper .body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.experience .wrapper .body .fir-block .text{
+    text-align: end;
+    font-size: 16px;
+    color: #0c0101;
+}
+
+.experience .wrapper .body .sec-block{
+    width: 40%;
+    height: 800px;
+    align-items: start;
+}
+
+.experience .wrapper .body .block.img{
+    width: 1px;
+    border-right: 1px solid #3a3a3a;
+}
+
+
+.experience .wrapper .body .fir-block{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 40%;
+    height: 800px;
+    overflow: hidden;
+    align-items: flex-end;
+}
+
+
+.experience .wrapper .body .fir-block .img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.experience .wrapper .body .sec-block .img{
+    margin-top: 100px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.title-spec{
+    color: #0c0101;
+    font-size: 24px;
+    padding-top: 50px;
 }

@@ -9,13 +9,18 @@ window.addEventListener("load", () => {
 });
 
 let scrollTop = document.querySelector('.head');
+let addHomeBtn = document.querySelector('#homesBtn');
 
 window.addEventListener('scroll', () => {
     let scrollPosition = window.scrollY;
     if (scrollPosition >= 100){
+        addHomeBtn.classList.remove('hiden');
+        addHomeBtn.classList.add('active');
         scrollTop.classList.add('active');
     }
     else {
+        addHomeBtn.classList.add('hiden');
+        addHomeBtn.classList.remove('active');
         scrollTop.classList.remove('active');
     };
 });
