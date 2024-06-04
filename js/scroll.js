@@ -63,5 +63,18 @@ scrollToExperience.addEventListener('click', function() {
 });
 
 scrollToExperienceMenu.addEventListener('click', function() {
-    smoothScrollMenu('.program');
+    smoothScrollMenu('.experience');
 });
+
+
+let scrollToPortfolio = document.querySelector('#portfBtn');
+let scrollToPortfolioMenu = document.querySelector('#portfBtnMenu');
+
+scrollToPortfolio.addEventListener('click', function() {
+    smoothScroll('.portfolio');
+});
+
+scrollToPortfolioMenu.addEventListener('click', function() {
+    smoothScrollMenu('.portfolio');
+});
+
