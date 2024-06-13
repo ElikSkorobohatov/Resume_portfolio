@@ -6,6 +6,11 @@
     .experience .wrapper .body .fir-block .block.img{
         margin: 0px 10px;
     }
+
+    .block-port .slide .block-video{
+        width: 400px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -112,7 +117,13 @@
         justify-content: center;
     }
 
+    .block-port .slide .block-video{
+        width: 600px;
 
+    }
+    .block-port .slider .slide{
+        flex-direction: column;
+    }
 
 }
 
@@ -216,6 +227,19 @@
     .experience .wrapper .body .fir-block .img{
         width: 90%;
         height: auto;
+    }
+
+    .experience .wrapper .body .fir-block .block-img{
+        display: none;
+    }
+
+    .block-port .slide .block-video{
+        width: 300px;
+    }
+
+    .block-port .slider .slide{
+        padding-right: 60px;
+        padding-left: 20px;
     }
 
 }

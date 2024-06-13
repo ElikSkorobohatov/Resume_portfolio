@@ -78,3 +78,13 @@ scrollToPortfolioMenu.addEventListener('click', function() {
     smoothScrollMenu('.portfolio');
 });
 
+let scrollToContact = document.querySelector('#contaBtn');
+let scrollToContactMenu = document.querySelector('#contaBtnMenu');
+
+scrollToContact.addEventListener('click', function() {
+    smoothScroll('.contact');
+});
+
+scrollToContactMenu.addEventListener('click', function() {
+    smoothScrollMenu('.contact');
+});

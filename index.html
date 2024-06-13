@@ -10,6 +10,7 @@
     <script defer src = "js/index.js"></script>
     <script defer src = "js/scroll.js"></script>
     <script defer src = "js/portf.js"></script>
+    <script defer src = "js/slider.js"></script>
 </head>
 <body>
 
@@ -204,7 +205,7 @@
                     <div class = "fir-block">
 
                         <img class = "img" src="icon/main/photomyfored.png">
-                        <div class = "block img"></div>
+                        <div class = "block-img"></div>
                         <div class = text>
                             <h1 class = "title-spec">Education</h1>
                             <p>2023 - 2027<br>Odessa National Polytechnic University<br>Automatisation computer system</p>
@@ -213,8 +214,6 @@
                         </div>
                     </div>
 
-                    <div class = "block img"></div>
-
                     <div class = "fir-block">
                         <div class = text2>
                             <h1 class = "title-spec">Work Experience</h1>
@@ -222,7 +221,7 @@
                             <p>2023 - 2024<br>IFU Sprachschulung | Deutschkurse in Wien<br>Administrator Online courses</p>
                             <p>2022 - 2023<br>Freelance<br>Creating a variety of videos</p>
                         </div>
-                        <div class = "block img"></div>
+                        <div class = "block-img"></div>
                         <img class = "img" src="icon/main/photomyfored2.png">
                     </div>
                 </div>
@@ -233,28 +232,115 @@
             <div class = "wrapper">
                 <div class="title"><h1>Portfolio</h1></div>
                 <div class = "block-text">
-
                     <h1 class = text>Your notes!</h1>
                     <div class = "btn" id="btn">+</div>
                     <div class = "btn" id="down">↓</div>
                     <div class = "btn" id="up">↑</div>
                 </div>
-                    <div class = "block-port" >
-                        <div class = "area">
-                                <div class="up">
-                                    <h3>Title</h3>
-                                    <a class="close" id="close">X</a>
-                                </div>
-                                <div class="general">
-                                    <textarea class = 'enter-text'></textarea>
-                                </div>
+
+                <div class = "block-port note" >
+                    <div class = "area">
+                        <div class="up">
+                            <h3>Title</h3>
+                            <a class="close" id="close">X</a>
+                        </div>
+                        <div class="general">
+                            <textarea class = 'enter-text'></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "block-text">
+                    <h1 class = "text video">     Video!    </h1>
+                    <div class = "btn" id="down-video">↓</div>
+                    <div class = "btn" id="up-video">↑</div>
+                    <h1 id = 'until' class="until">←</h1>
+                    <h1 id = 'next' class="next">→</h1>
+                </div>
+                <div class = "block-port video">
+                    <div class = 'slider'>
+                        <div class = slide>
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Trip to Kherson</h1>
+                                <iframe width="100%" height="315px" src="https://www.youtube.com/embed/WzklagrrKUQ?si=Dgint2PTmIEtP3SW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>I have been working with video for a long time and creating different projects!
+                                    When I did this, I understood how to work with a client and
+                                    in different projects!</p>
+                                <p>In this video I was given the opportunity to express myself and was given complete creative freedom.</p>
+                            </div>
+
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Connect Camp</h1>
+                                <iframe width="100%" height="315px" src="https://www.youtube.com/embed/nuUyvaJGZjc?si=k3O1wOGIGhuwFqpX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>Sometimes I make videos for my soul and this is one of the ways to relax! Because basically it’s a way to distract yourself, relax and develop your creativity.</p>
+                                <p>In this video there was a precise task and it is the work with editing that develops precise work on the task.</p>
+                            </div>
                         </div>
 
-                    </div>
+                        <div class = slide>
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Thema "Wetter" | Тема "Погода"</h1>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/FVWiXJw16Dc?si=WVFZPOmBnWIvEMfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>The ability to create content from scratch, when there is only an idea, it amazes me and I love it.</p>
+                                <p>When there are no examples, this is an incredible ability to realize what the client wants, and in programming it is a necessary thing!</p>
+                            </div>
 
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Video recording of the choir</h1>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/n1m0DIx_qyU?si=Pxo2tEUXJcYRNb8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>In video shooting, you need to be able to find different angles of opinion and solutions.</p>
+                                <p>Likewise, in programming for one task you need to have many different solutions and points of view in order for everything to be perfect!</p>
+                            </div>
+                        </div>
+
+                        <div class = slide>
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Video for city day</h1>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/q-1Ms47e7EE?si=T4GGTwHWXN1k3PV6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>In this video there was a lot of varied material that needed to be collected and repackaged.</p>
+                                <p>And in programming, this is a very important point, because you need to be able to properly package all the files and create a high-quality project tree.</p>
+                            </div>
+
+                            <div class = 'block-video'>
+                                <h1 class = 'title'>Connect Camp</h1>
+                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/2XJrSQDkYrU?si=j1_mwSxfdQU7vD4C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <p>With the help of video content, you can make a variety of videos that will touch your soul.</p>
+                                <p>It is also necessary in programming. You need to be able to make a person touch and evoke emotions. So that a person is happy every time he visits the site.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <div class = 'contact'>
+            <div class = "wrapper">
+                <div class = 'fir-block'>
+                    <div class="title"><h1>Contact</h1></div>
+
+                    <p class = 'text'>Please contact me via this form and I will reply back within 24 hours.</p>
+                    <p class = 'text'>Or write me on WhatsApp +40 747 366 435</p>
+                    <p class = 'text'>ee.sd.2005@gmail.com</p>
+                </div>
+                <div class = "sec-block">
+                    <div class="title"><p>Find me:</p></div>
+                    <a href = "https://www.facebook.com/elik.skorobogatov">
+                        <img class = "img" src = "icon/head/facebook.png">
+                    </a>
+                    <a href = "https://www.instagram.com/_el.skor_/">
+                        <img class = "img" src = "icon/head/instagram.png">
+                    </a>
+                    <a href = "https://www.linkedin.com/in/elik-scorobohatov-73bb45246">
+                        <img class = "img" src = "icon/head/linkedin.png">
+                    </a>
+                    <a href = "https://github.com/ElikSkorobohatov">
+                        <img class = "img" src = "icon/head/github.png">
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
 
 
     </div>

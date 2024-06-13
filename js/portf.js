@@ -1,12 +1,25 @@
-let scrolollDown = document.querySelector('#down');
-let scrolollup = document.querySelector('#up');
-
-let blockArea = document.querySelector('.block-port');
+let blockArea = document.querySelector('.block-port.note');
+let blockAreaVideo = document.querySelector('.block-port.video');
 blockArea.style.height = '0';
+blockAreaVideo.style.height = '0';
 
 let addButton = document.querySelector('#btn');
 let upButton = document.querySelector('#up');
 let downButton = document.querySelector('#down');
+
+let nextButton = document.querySelector('#next');
+let untilButton = document.querySelector('#until');
+
+let upButtonVideo = document.querySelector('#up-video');
+let downButtonVideo = document.querySelector('#down-video');
+
+nextButton.style.height = '0';
+nextButton.style.width = '0';
+nextButton.style.opacity = '0';
+
+untilButton.style.height = '0';
+untilButton.style.width = '0';
+untilButton.style.opacity = '0';
 
 addButton.style.height = '0';
 addButton.style.width = '0';
@@ -16,39 +29,99 @@ upButton.style.height = '0';
 upButton.style.width = '0';
 upButton.style.opacity = '0';
 
-scrolollDown.addEventListener('click', (e) => {
-    blockArea.style.height = '600px';
+upButtonVideo.style.height = '0';
+upButtonVideo.style.width = '0';
+upButtonVideo.style.opacity = '0';
 
-    addButton.style.height = '70px';
-    addButton.style.width = '70px';
-    addButton.style.opacity = '1';
 
-    upButton.style.height = '70px';
-    upButton.style.width = '70px';
-    upButton.style.opacity = '1';
+function showBlock(down, up, block, add, next, until) {
+    down.style.height = '0';
+    down.style.width = '0';
+    down.style.opacity = '0';
 
-    downButton.style.height = '0px';
-    downButton.style.width = '0px';
-    downButton.style.opacity = '0';
+    up.style.height = '70px';
+    up.style.width = '70px';
+    up.style.opacity = '1';
+
+    block.style.height = '600px';
+
+    add.style.height = '70px';
+    add.style.width = '70px';
+    add.style.opacity = '1';
+
+    next.style.height = '70px';
+    next.style.width = '70px';
+    next.style.opacity = '1';
+
+    until.style.height = '70px';
+    until.style.width = '70px';
+    until.style.opacity = '1';
+}
+
+function hideBlock(down, up, block, add, next, until) {
+    down.style.height = '70px';
+    down.style.width = '70px';
+    down.style.opacity = '1';
+
+    up.style.height = '0';
+    up.style.width = '0';
+    up.style.opacity = '0';
+
+    block.style.height = '0';
+
+    add.style.height = '0';
+    add.style.width = '0';
+    add.style.opacity = '0';
+
+    next.style.height = '0';
+    next.style.width = '0';
+    next.style.opacity = '0';
+
+    until.style.height = '0';
+    until.style.width = '0';
+    until.style.opacity = '0';
+}
+
+downButton.addEventListener('click', () => {
+    showBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
+});
+
+downButtonVideo.addEventListener('click', () => {
+    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
+    hideBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
+});
+
+upButton.addEventListener('click', () => {
+    hideBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
+});
+
+upButtonVideo.addEventListener('click', () => {
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
+});
+
+
+
+downButton.addEventListener('click', (e) => {
+    console.log(downButton, upButton, blockArea, addButton, nextButton, untilButton, upButtonVideo, downButtonVideo);
+
+    showBlock(downButton, upButton, blockArea, addButton);
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
 })
 
-scrolollup.addEventListener('click', (e) => {
-    blockArea.style.height = '0';
-
-    addButton.style.height = '0';
-    addButton.style.width = '0';
-    addButton.style.opacity = '0';
-
-    upButton.style.height = '0';
-    upButton.style.width = '0';
-    upButton.style.opacity = '0';
-
-    downButton.style.height = '70px';
-    downButton.style.width = '70px';
-    downButton.style.opacity = '1';
+downButtonVideo.addEventListener('click', (e) => {
+    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
+    hideBlock(downButton, upButton, blockArea, addButton);
 })
 
 
+upButton.addEventListener('click', (e) => {
+    hideBlock(downButton, upButton, blockArea, addButton);
+})
+
+upButtonVideo.addEventListener('click', (e) => {
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
+})
 
 
 

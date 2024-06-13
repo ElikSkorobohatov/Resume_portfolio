@@ -517,9 +517,10 @@ body{
 }
 
 
-.experience .wrapper .body .fir-block .block.img{
+.experience .wrapper .body .fir-block .block-img{
     width: 1px;
     border-right: 1px solid #3a3a3a;
+    height: 450px;
 }
 
 
@@ -576,15 +577,19 @@ body{
     background-color: rgb(255, 255, 255);
     color: #f3f3f3;
     max-width: 1200px;
+    height: 600px;
     border: #959595 solid 1px;
     position: relative;
     overflow: hidden;
-    height: 600px;
     transition: 1s;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 .portfolio .wrapper .block-text{
-    height: 100px;
+    height: 70px;
     font-size: 26px;
     display: flex;
     align-items: center;
@@ -594,9 +599,14 @@ body{
     transition: 1s;
 }
 
+.portfolio .wrapper .block-text .text.video{
+    width: 81%;
+}
+
 .portfolio .wrapper .block-text .text{
     text-align: center;
     width: 80%;
+    font-size: 32px;
 }
 
 .portfolio .wrapper .block-text .btn{
@@ -670,4 +680,88 @@ body{
     background-color: #3a3a3a;
     border:none;
     color: white;
+}
+
+.block-port .block .title{
+
+
+}
+
+.block-port .slider {
+    display: flex;
+    transition: 1s;
+}
+
+.block-port .slider .slide{
+    display: flex;
+    padding: 40px 40px 40px 60px;
+}
+
+.block-port .slide .block-video{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 20px;
+    background-color: #3a3a3a;
+    text-align:  center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.block-port .block-video p{
+    text-align: start;
+    margin: 20px;
+}
+
+.until{
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #222222;
+    width: 70px;
+    border-radius: 100%;
+    transition: 0.5s;
+    margin: 5px;
+}
+
+.next{
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #222222;
+    width: 70px;
+    border-radius: 100%;
+    transition: 0.5s;
+    margin: 5px;
+}
+
+.contact .wrapper{
+    padding-bottom: 50px;
+    display: flex;
+}
+
+.contact .wrapper .fir-block .title{
+    color: #097009;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact .wrapper .sec-block{
+    margin-left: 80px;
+    margin-top: 80px;
+}
+
+.contact .wrapper .sec-block .img{
+    width: 40px;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+.contact .wrapper .sec-block .title{
+    font-size: 24px;
+    color: black;
 }
