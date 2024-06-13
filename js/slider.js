@@ -3,14 +3,13 @@ const untilSlideBtn = document.querySelector("#until");
 const slideWight = document.querySelector(".slider");
 
 let position = 0;
-let slideWidth = document.querySelector('.slide').offsetWidth;
-const maxSlides = 3; // количество слайдов
-const maxPosition = -slideWidth  * (maxSlides - 1);
+let slideWidth = document.querySelector('.block-port.video').offsetWidth;
+const maxPosition = -3 * 1080;
 
 
 
 nextSlideBtn.addEventListener("click", function() {
-    slideWidth = document.querySelector('.slide').offsetWidth;
+    slideWidth = document.querySelector('.block-port.video').offsetWidth;
     if (position <= maxPosition) {
         position = 0;
     } else {
@@ -21,7 +20,7 @@ nextSlideBtn.addEventListener("click", function() {
 });
 
 untilSlideBtn.addEventListener("click", function() {
-    slideWidth = document.querySelector('.slide').offsetWidth;
+    slideWidth = document.querySelector('.block-port.video').offsetWidth;
     if (position === 0) {
         position = maxPosition;
     } else {

@@ -118,11 +118,13 @@
     }
 
     .block-port .slide .block-video{
-        width: 600px;
+        width: 700px;
+        margin: 50px;
 
     }
     .block-port .slider .slide{
-        flex-direction: column;
+        padding: 0;
+        margin: 0;
     }
 
 }
@@ -234,12 +236,11 @@
     }
 
     .block-port .slide .block-video{
-        width: 300px;
+        width: 350px;
     }
 
-    .block-port .slider .slide{
-        padding-right: 60px;
-        padding-left: 20px;
+    .portfolio .wrapper .block-port{
+        padding-right: 30px;
     }
 
 }
