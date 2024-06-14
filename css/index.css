@@ -694,7 +694,9 @@ body{
 
 .block-port .slider .slide{
     display: flex;
-    margin: 40px 40px 40px 60px;
+    padding: 30px;
+    width: 1140px;
+    justify-content: space-around;
 }
 
 .block-port .slide .block-video{
