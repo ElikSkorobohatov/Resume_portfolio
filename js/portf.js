@@ -1,7 +1,10 @@
 let blockArea = document.querySelector('.block-port.note');
 let blockAreaVideo = document.querySelector('.block-port.video');
+let blockAreaTikTak = document.querySelector('.block-port.tiktak');
+
 blockArea.style.height = '0';
 blockAreaVideo.style.height = '0';
+blockAreaTikTak.style.height = '0';
 
 let addButton = document.querySelector('#btn');
 let upButton = document.querySelector('#up');
@@ -13,114 +16,131 @@ let untilButton = document.querySelector('#until');
 let upButtonVideo = document.querySelector('#up-video');
 let downButtonVideo = document.querySelector('#down-video');
 
-nextButton.style.height = '0';
-nextButton.style.width = '0';
-nextButton.style.opacity = '0';
+let upButtonTikTak = document.querySelector('#up-tiktak');
+let downButtonTikTak = document.querySelector('#down-tiktak');
 
-untilButton.style.height = '0';
-untilButton.style.width = '0';
-untilButton.style.opacity = '0';
+hidenBlockButton(nextButton)
+hidenBlockButton(untilButton)
+hidenBlockButton(addButton)
+hidenBlockButton(upButton)
+hidenBlockButton(upButtonVideo)
+hidenBlockButton(upButtonTikTak)
 
-addButton.style.height = '0';
-addButton.style.width = '0';
-addButton.style.opacity = '0';
-
-upButton.style.height = '0';
-upButton.style.width = '0';
-upButton.style.opacity = '0';
-
-upButtonVideo.style.height = '0';
-upButtonVideo.style.width = '0';
-upButtonVideo.style.opacity = '0';
-
-
-function showBlock(down, up, block, add, next, until) {
-    down.style.height = '0';
-    down.style.width = '0';
-    down.style.opacity = '0';
-
-    up.style.height = '70px';
-    up.style.width = '70px';
-    up.style.opacity = '1';
-
-    block.style.height = '600px';
-
-    add.style.height = '70px';
-    add.style.width = '70px';
-    add.style.opacity = '1';
-
-    next.style.height = '70px';
-    next.style.width = '70px';
-    next.style.opacity = '1';
-
-    until.style.height = '70px';
-    until.style.width = '70px';
-    until.style.opacity = '1';
+function hidenBlockButton(button){
+    button.style.height = '0';
+    button.style.width = '0';
+    button.style.opacity = '0';
 }
 
-function hideBlock(down, up, block, add, next, until) {
-    down.style.height = '70px';
-    down.style.width = '70px';
-    down.style.opacity = '1';
+function showBlockButton(button){
+    button.style.height = '70px';
+    button.style.width = '70px';
+    button.style.opacity = '1';
+}
 
-    up.style.height = '0';
-    up.style.width = '0';
-    up.style.opacity = '0';
+function showBlock(down, up, block,) {
+    hidenBlockButton(down)
 
+    showBlockButton(up)
+
+
+    block.style.height = '600px';
+}
+
+function hideBlock(down, up, block, ) {
+    showBlockButton(down)
+    hidenBlockButton(up)
     block.style.height = '0';
 
-    add.style.height = '0';
-    add.style.width = '0';
-    add.style.opacity = '0';
+}
 
-    next.style.height = '0';
-    next.style.width = '0';
-    next.style.opacity = '0';
+function addShowBlock(add, next, until){
+    showBlockButton(add)
+    showBlockButton(next)
+    showBlockButton(until)
+}
 
-    until.style.height = '0';
-    until.style.width = '0';
-    until.style.opacity = '0';
+function addHideBlock(add, next, until){
+    hidenBlockButton(add)
+    hidenBlockButton(next)
+    hidenBlockButton(until)
 }
 
 downButton.addEventListener('click', () => {
-    showBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
-    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
+    showBlock(downButton, upButton, blockArea);
+    addShowBlock(addButton, nextButton, untilButton);
+
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addHideBlock(addButton, nextButton, untilButton);
+
+    hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
 });
 
 downButtonVideo.addEventListener('click', () => {
-    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
-    hideBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
+    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addShowBlock(addButton, nextButton, untilButton);
+
+    hideBlock(downButton, upButton, blockArea);
+    addHideBlock(addButton, nextButton, untilButton);
+
+    hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
 });
 
 upButton.addEventListener('click', () => {
-    hideBlock(downButton, upButton, blockArea, addButton, nextButton, untilButton);
+    hideBlock(downButton, upButton, blockArea);
+    addHideBlock(addButton, nextButton, untilButton);
 });
 
 upButtonVideo.addEventListener('click', () => {
-    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, addButton, nextButton, untilButton);
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addHideBlock(addButton, nextButton, untilButton);
 });
 
 
 
 downButton.addEventListener('click', (e) => {
-    console.log(downButton, upButton, blockArea, addButton, nextButton, untilButton, upButtonVideo, downButtonVideo);
-
     showBlock(downButton, upButton, blockArea, addButton);
-    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
+    addShowBlock(addButton);
+
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addHideBlock(upButtonVideo, nextButton, untilButton)
+
+    hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
 })
 
 downButtonVideo.addEventListener('click', (e) => {
-    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
-    hideBlock(downButton, upButton, blockArea, addButton);
+    showBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addShowBlock(upButtonVideo, nextButton, untilButton);
+
+    hideBlock(downButton, upButton, blockArea);
+    addHideBlock(addButton)
+
+    hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
 })
 
 
 upButton.addEventListener('click', (e) => {
     hideBlock(downButton, upButton, blockArea, addButton);
+    addHideBlock(addButton);
 })
 
 upButtonVideo.addEventListener('click', (e) => {
-    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo, upButtonVideo, nextButton, untilButton);
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addHideBlock(upButtonVideo, nextButton, untilButton)
+})
+
+upButtonTikTak.addEventListener('click', (e) => {
+    hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+})
+
+downButtonTikTak.addEventListener('click', (e) => {
+    showBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+
+    hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
+    addHideBlock(upButtonVideo, nextButton, untilButton)
+
+    hideBlock(downButton, upButton, blockArea);
+    addHideBlock(addButton);
 })
 
 
