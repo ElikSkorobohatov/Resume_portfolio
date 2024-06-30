@@ -1,3 +1,13 @@
+.TicTacToe.active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 1;
+}
+
 body{
     margin: 0px;
     font-family: "Montserrat", sans-serif;
@@ -588,7 +598,7 @@ body{
 
 }
 
-.portfolio .wrapper .block-text{
+.block-text{
     height: 70px;
     font-size: 26px;
     display: flex;
@@ -597,6 +607,8 @@ body{
     padding: 20px;
     margin: 0;
     transition: 1s;
+    color: #ffffff;
+    justify-content: center;
 }
 
 .portfolio .wrapper .block-text .text.video{
@@ -609,7 +621,7 @@ body{
     font-size: 32px;
 }
 
-.portfolio .wrapper .block-text .btn{
+.btn{
     font-size: 42px;
     display: flex;
     justify-content: center;
@@ -623,7 +635,7 @@ body{
     margin: 5px;
 }
 
-.portfolio .wrapper .block-text .btn:hover{
+.btn:hover{
     background-color: #0c0101;
     transition: 0.5s;
 }
@@ -767,3 +779,9 @@ body{
     font-size: 24px;
     color: black;
 }
+
+.imgscreen{
+    width: 50px;
+    filter: brightness(0) invert(1);
+}
+

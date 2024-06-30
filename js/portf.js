@@ -19,12 +19,18 @@ let downButtonVideo = document.querySelector('#down-video');
 let upButtonTikTak = document.querySelector('#up-tiktak');
 let downButtonTikTak = document.querySelector('#down-tiktak');
 
+let fullScreenBtn = document.querySelector('#fullscreen');
+
+let load = document.querySelector("#loadSite")
+
+
 hidenBlockButton(nextButton)
 hidenBlockButton(untilButton)
 hidenBlockButton(addButton)
 hidenBlockButton(upButton)
 hidenBlockButton(upButtonVideo)
 hidenBlockButton(upButtonTikTak)
+hidenBlockButton(fullScreenBtn)
 
 function hidenBlockButton(button){
     button.style.height = '0';
@@ -40,10 +46,7 @@ function showBlockButton(button){
 
 function showBlock(down, up, block,) {
     hidenBlockButton(down)
-
     showBlockButton(up)
-
-
     block.style.height = '600px';
 }
 
@@ -51,7 +54,6 @@ function hideBlock(down, up, block, ) {
     showBlockButton(down)
     hidenBlockButton(up)
     block.style.height = '0';
-
 }
 
 function addShowBlock(add, next, until){
@@ -99,23 +101,30 @@ upButtonVideo.addEventListener('click', () => {
 
 
 downButton.addEventListener('click', (e) => {
+    console.log(1)
     showBlock(downButton, upButton, blockArea, addButton);
-    addShowBlock(addButton);
-
     hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
     addHideBlock(upButtonVideo, nextButton, untilButton)
 
+    hidenBlockButton(fullScreenBtn)
+
     hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+
+    addShowBlock(addButton);
+
 })
 
 downButtonVideo.addEventListener('click', (e) => {
     showBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
     addShowBlock(upButtonVideo, nextButton, untilButton);
 
+    hidenBlockButton(fullScreenBtn)
+
     hideBlock(downButton, upButton, blockArea);
-    addHideBlock(addButton)
 
     hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+
+    addHideBlock(addButton)
 })
 
 
@@ -131,16 +140,47 @@ upButtonVideo.addEventListener('click', (e) => {
 
 upButtonTikTak.addEventListener('click', (e) => {
     hideBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+    hidenBlockButton(fullScreenBtn)
 })
 
 downButtonTikTak.addEventListener('click', (e) => {
     showBlock(downButtonTikTak, upButtonTikTak, blockAreaTikTak);
+    showBlockButton(fullScreenBtn)
 
     hideBlock(downButtonVideo, upButtonVideo, blockAreaVideo);
     addHideBlock(upButtonVideo, nextButton, untilButton)
 
     hideBlock(downButton, upButton, blockArea);
     addHideBlock(addButton);
+})
+
+fullScreenBtn.addEventListener('click', (e) =>{
+    let fullsreen = document.querySelector('.fullsreen');
+    load.classList.remove('active');
+    load.style.display = 'none'
+    let template = '';
+    template += '<div class="TicTacToe">'+
+        '<div class = "block-text">'+
+            '<h1 class = "text video">Tic Tac Toe</h1>'+
+            '<div class = "btn" id="partscreen"><img class="imgscreen" src="icon/partscreen.png"></div>'+
+        '</div>'+
+
+        '<div class = "block-port tiktak">'+
+            '<iframe id="tiktak" src="tiktak.html" width="100%" height="800px" style="border:none;"></iframe>'+
+        '</div>'+
+    '</div>'
+
+    fullsreen.innerHTML = template;
+    let partScreenBtn = document.querySelector('#partscreen');
+
+    partScreenBtn.addEventListener('click', (e) => {
+
+        template = " "
+        fullsreen.innerHTML = template;
+
+        load.classList.add('active');
+        load.style.display = 'block'
+    })
 })
 
 
