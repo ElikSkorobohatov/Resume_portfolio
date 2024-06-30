@@ -178,8 +178,13 @@ fullScreenBtn.addEventListener('click', (e) =>{
         template = " "
         fullsreen.innerHTML = template;
 
+        let portfolio = document.querySelector('.portfolio');
         load.classList.add('active');
         load.style.display = 'block'
+        window.scrollTo({
+            top: portfolio.offsetTop + 600,
+            behavior: 'smooth'
+        });
     })
 })
 
